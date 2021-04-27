@@ -13,17 +13,21 @@
 
   <tbody>
     <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.body %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.body %></td>
+      <td><%= link_to 'Show', article %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<%= cl_image_tag("anb9a1e325ozezt1jwtf",
+      width: 400, height: 300, crop: :fill) %>
+<%= cl_image_tag("h8t0cg8dpwl31fumvarv",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
 
 <%= link_to 'New Article', new_article_path %>
