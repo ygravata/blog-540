@@ -23,6 +23,7 @@ gem 'turbolinks', '~> 5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'simple_form'
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 # Use Active Storage variant
